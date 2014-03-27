@@ -161,6 +161,9 @@ GameManager.prototype.move = function (direction) {
             self.won = false;
             self.over = true;
           }
+          if (merged.value <= -2048) {
+            self.over = true;
+          }
         } else {
           self.moveTile(tile, positions.farthest);
         }
