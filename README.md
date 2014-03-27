@@ -9,7 +9,8 @@ Changes and improvements are more than welcome! Feel free to fork and open a pul
 You can find the same information in the [contributing guide.](https://github.com/frankh/2048/blob/master/CONTRIBUTING.md)
 
 ## License
-2048 is licensed under the [MIT license.](https://github.com/gabrielecirulli/2048/blob/master/LICENSE.txt)
+2048 is licensed under the [MIT license.](https://github.com/frankh/2048/blob/master/LICENSE.txt)
 
 ## Donations
-I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my BTC address: `18frank25nFgYtM8QeohFAMZQAi2dNbcu2`. Thank you very much!
+
+I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game you can donate at my BTC address: `18frank25nFgYtM8QeohFAMZQAi2dNbcu2`. I recommend you donate to [The original creator](https://github.com/gabrielecirulli/2048) instead.
