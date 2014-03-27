@@ -1,4 +1,4 @@
-# 2048
+# 2048+-*/
 A small modification of [2048](https://github.com/gabrielecirulli/2048) - now operators spawn, and tile numbers only change when an operator is sandwiched between them.
 
 Made just for fun. [Play it here!](http://frankh.github.io/2048/)
