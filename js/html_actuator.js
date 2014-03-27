@@ -54,13 +54,18 @@ HTMLActuator.prototype.addTile = function (tile) {
   var position  = tile.previousPosition || { x: tile.x, y: tile.y };
   var positionClass = this.positionClass(position);
 
-  var closest2Power = Math.pow(2, Math.floor(Math.log(tile.value) / Math.log(2)));
+  var neg = "";
+  var closest2Power = Math.pow(2, Math.floor(Math.log(Math.abs(tile.value)) / Math.log(2)));
   if( tile.value === 0 ) {
     closest2Power = 0
   }
 
+  if( tile.value < 0 ) {
+    neg = "neg-"
+  }
+
   // We can't use classlist because it somehow glitches when replacing classes
-  var classes = ["tile", "tile-" + closest2Power, positionClass];
+  var classes = ["tile", "tile-" + neg + closest2Power, positionClass];
 
   if (tile.value > 2048) classes.push("tile-super");
 
@@ -120,6 +125,13 @@ HTMLActuator.prototype.updateScore = function (score) {
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
     addition.textContent = "+" + difference;
+
+    this.scoreContainer.appendChild(addition);
+  }
+  else if (difference < 0) {
+    var addition = document.createElement("div");
+    addition.classList.add("score-addition");
+    addition.textContent = difference;
 
     this.scoreContainer.appendChild(addition);
   }
