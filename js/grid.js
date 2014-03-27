@@ -69,7 +69,17 @@ Grid.prototype.numOperators = function(cell) {
     }
   })
   return num_ops;
-}
+};
+
+Grid.prototype.valueSum = function(cell) {
+  var sum = 0;
+  this.eachCell(function(x, y, cell) {
+    if( cell && !cell.isOperator() ) {
+      sum += cell.value;
+    }
+  })
+  return sum;
+};
 
 Grid.prototype.cellContent = function (cell) {
   if (this.withinBounds(cell)) {
