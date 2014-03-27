@@ -145,7 +145,7 @@ GameManager.prototype.move = function (direction) {
         } else if (!tile.isOperator() && next && !next.isOperator() && !next.mergedFrom
           && mid && mid.isOperator() && !mid.mergedFrom
           ) {
-          var merged = new Tile(next_positions.next, Math.max(0, Math.floor(eval(tile.value + mid.value + next.value))));
+          var merged = new Tile(next_positions.next, Math.floor(eval("("+tile.value+")" + mid.value + "("+next.value+")")));
           merged.mergedFrom = [tile, next];
 
           self.grid.insertTile(merged);
@@ -154,9 +154,6 @@ GameManager.prototype.move = function (direction) {
 
           // Converge the two tiles' positions
           tile.updatePosition(next_positions.next);
-
-          // Update the score
-          self.score += merged.value;
 
           // The mighty 2048 tile
           if (merged.value >= 2048) self.won = true;
@@ -174,6 +171,12 @@ GameManager.prototype.move = function (direction) {
       }
     });
   });
+
+  // Update the score
+  self.score = self.grid.valueSum();
+  if (self.score === Infinity) {
+    self.score = 0;
+  }
 
   if (moved) {
     this.addRandomTile();
