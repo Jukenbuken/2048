@@ -13,4 +13,4 @@ You can find the same information in the [contributing guide.](https://github.co
 
 ## Donations
 
-I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game you can donate at my BTC address: `18frank25nFgYtM8QeohFAMZQAi2dNbcu2`. I recommend you donate to [The original creator](https://github.com/gabrielecirulli/2048) instead.
+I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game you can donate at my BTC address: `18frank25nFgYtM8QeohFAMZQAi2dNbcu2`. I recommend you donate to [gabrielecirulli](https://github.com/gabrielecirulli/2048) instead.
