@@ -61,6 +61,16 @@ Grid.prototype.cellOccupied = function (cell) {
   return !!this.cellContent(cell);
 };
 
+Grid.prototype.numOperators = function(cell) {
+  var num_ops = 0;
+  this.eachCell(function(x, y, cell) {
+    if( cell && cell.isOperator() ) {
+      num_ops += 1;
+    }
+  })
+  return num_ops;
+}
+
 Grid.prototype.cellContent = function (cell) {
   if (this.withinBounds(cell)) {
     return this.cells[cell.x][cell.y];
