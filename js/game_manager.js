@@ -58,7 +58,7 @@ GameManager.prototype.addStartTiles = function () {
 
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
-  var op_choices = ["+", "*", "-", "*", "*", "/"]
+  var op_choices = ["*", "*", "*", "*", "*", "*"]
   if (this.grid.cellsAvailable()) {
     var value;
     if (this.grid.numOperators() > 3 || Math.random() < 0.5) {
@@ -156,12 +156,12 @@ GameManager.prototype.move = function (direction) {
           tile.updatePosition(next_positions.next);
 
           // The mighty 2048 tile
-          if (merged.value >= 2048) self.won = true;
+          if (merged.value >= 6000) self.won = true;
           if (merged.value === Infinity || merged.value === NaN) {
             self.won = false;
             self.over = true;
           }
-          if (merged.value <= -2048) {
+          if (merged.value <= -6000) {
             self.over = true;
           }
         } else {
